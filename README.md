@@ -15,7 +15,7 @@
 ![](https://p.pstatp.com/origin/137d50001526892e89a6a)
 
 # 项目详细功能点
-项目配有 [教程](https://songyaofeng.com/course/books/18)，虽然不是大师级的教程，但多多少少对于刚入门的 gopher 来说还是很有用的，该教程需要付费，😀😀😀，不多，不要害怕，一杯咖啡钱（39.9）。当然也可以不需要查看本教程，查看本源码也是一种不错的学习方式。
+项目配有 [教程](https://songyaofeng.com/course/books/18)，虽然不是大师级的教程，但多多少少对于刚入门的 gopher 来说还是很有用的，该教程需要付费😀😀😀，不多，不要害怕，一杯咖啡钱（39.9）。当然也可以不需要查看本教程，查看本源码也是一种不错的学习方式。
 
 更多项目详细功能点可以 [到这里](https://songyaofeng.com/course/books/18) 了解一下。
 
@@ -26,7 +26,7 @@
 
 **没有打赏，交个朋友也不错**😊😊😊
 
-<img src="https://img.imgdb.cn/item/604c80535aedab222c4d10b1.jpg" width="250" />
+<img src="https://img.songyaofeng.com/images/upload37f888efaab0434e9e89ac473710572a.jpeg" width="250" />
 
 
 **没有打赏，给个 star ，送人玫瑰，手留余香** ✨✨✨
