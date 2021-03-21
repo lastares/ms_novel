@@ -31,6 +31,10 @@
 
 **没有朋友，给个 star ，送人玫瑰，手留余香** ✨✨✨
 
+# License
+
+The Laravel framework is open-sourced software licensed under the MIT license.
+
 
 
 
