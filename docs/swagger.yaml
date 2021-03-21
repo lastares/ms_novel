@@ -1,0 +1,541 @@
+definitions:
+  model.Novel:
+    properties:
+      chapterPreview:
+        type: string
+      createdAt:
+        $ref: '#/definitions/utils.Datetime'
+      id:
+        type: integer
+      isDisplayIndex:
+        type: integer
+      isHot:
+        type: integer
+      isNew:
+        type: integer
+      isRecommend:
+        type: integer
+      mainRole:
+        type: string
+      novelAuthor:
+        type: string
+      novelBannerCover:
+        type: string
+      novelCategory:
+        $ref: '#/definitions/model.NovelCategory'
+      novelCategoryId:
+        type: integer
+      novelCover:
+        type: string
+      novelDescription:
+        type: string
+      novelNavigation:
+        $ref: '#/definitions/model.NovelNavigation'
+      novelNavigationId:
+        type: integer
+      novelStatus:
+        type: integer
+      novelThemes:
+        items:
+          $ref: '#/definitions/model.NovelTheme'
+        type: array
+      novelTitle:
+        type: string
+      sortNum:
+        type: integer
+      updatedAt:
+        $ref: '#/definitions/utils.Datetime'
+      viewNum:
+        type: integer
+    type: object
+  model.NovelCategory:
+    properties:
+      categoryIcon:
+        type: string
+      categoryName:
+        type: string
+      createdAt:
+        $ref: '#/definitions/utils.Datetime'
+      id:
+        type: integer
+      isDisplayIndex:
+        type: integer
+      novelNavigation:
+        $ref: '#/definitions/model.NovelNavigation'
+      novelNavigationId:
+        type: integer
+      novels:
+        items:
+          $ref: '#/definitions/model.Novel'
+        type: array
+      sortNum:
+        type: integer
+      updatedAt:
+        $ref: '#/definitions/utils.Datetime'
+    type: object
+  model.NovelNavigation:
+    properties:
+      createdAt:
+        $ref: '#/definitions/utils.Datetime'
+      id:
+        type: integer
+      isDisplayIndex:
+        type: integer
+      navigationName:
+        type: string
+      novelCategories:
+        items:
+          $ref: '#/definitions/model.NovelCategory'
+        type: array
+      novels:
+        items:
+          $ref: '#/definitions/model.Novel'
+        type: array
+      sortNum:
+        type: integer
+      updatedAt:
+        $ref: '#/definitions/utils.Datetime'
+    type: object
+  model.NovelTheme:
+    properties:
+      createdAt:
+        $ref: '#/definitions/utils.Datetime'
+      id:
+        type: integer
+      novels:
+        items:
+          $ref: '#/definitions/model.Novel'
+        type: array
+      sortNum:
+        type: integer
+      themeCover:
+        type: string
+      themeDescription:
+        type: string
+      themeName:
+        type: string
+      themeSubtitle:
+        type: string
+      updatedAt:
+        $ref: '#/definitions/utils.Datetime'
+    type: object
+  novelDTO.CategoryDTO:
+    properties:
+      categoryName:
+        type: string
+      id:
+        type: integer
+    type: object
+  novelDTO.NavigationDTO:
+    properties:
+      id:
+        type: integer
+      navigationName:
+        type: string
+    type: object
+  novelDTO.NovelAdminListDTO:
+    properties:
+      list:
+        description: 列表数据
+        items:
+          $ref: '#/definitions/novelDTO.NovelCopy'
+        type: array
+      total:
+        description: 总数
+        type: integer
+    type: object
+  novelDTO.NovelCopy:
+    properties:
+      chapterPreview:
+        type: string
+      createdAt:
+        $ref: '#/definitions/utils.Datetime'
+      id:
+        type: integer
+      isDisplayIndex:
+        type: integer
+      isHot:
+        type: integer
+      isNew:
+        type: integer
+      isRecommend:
+        type: integer
+      mainRole:
+        type: string
+      novelAuthor:
+        type: string
+      novelBannerCover:
+        type: string
+      novelCategory:
+        $ref: '#/definitions/model.NovelCategory'
+      novelCategoryId:
+        type: integer
+      novelCover:
+        type: string
+      novelDescription:
+        type: string
+      novelNavigation:
+        $ref: '#/definitions/model.NovelNavigation'
+      novelNavigationId:
+        type: integer
+      novelStatus:
+        type: integer
+      novelThemes:
+        items:
+          $ref: '#/definitions/model.NovelTheme'
+        type: array
+      novelTitle:
+        type: string
+      sortNum:
+        type: integer
+      updatedAt:
+        $ref: '#/definitions/utils.Datetime'
+      viewNum:
+        type: integer
+    type: object
+  novelDTO.NovelDTO:
+    properties:
+      id:
+        type: integer
+      isDisplayIndex:
+        type: integer
+      isHot:
+        type: integer
+      isHotTitle:
+        type: string
+      isNew:
+        type: integer
+      isNewTitle:
+        type: string
+      isRecommend:
+        type: integer
+      isRecommendTitle:
+        type: string
+      mainRole:
+        type: string
+      novelAuthor:
+        type: string
+      novelCategory:
+        $ref: '#/definitions/novelDTO.CategoryDTO'
+      novelNavigation:
+        $ref: '#/definitions/novelDTO.NavigationDTO'
+      novelStatus:
+        type: integer
+      novelStatusTitle:
+        type: string
+      novelThemes:
+        items:
+          $ref: '#/definitions/novelDTO.ThemeDTO'
+        type: array
+      novelTitle:
+        type: string
+    type: object
+  novelDTO.ThemeDTO:
+    properties:
+      id:
+        type: integer
+      themeName:
+        type: string
+    type: object
+  request.NovelCreate:
+    properties:
+      chapterPreview:
+        description: 章节预览
+        example: xxxx
+        type: string
+      isDisplayIndex:
+        description: 是否首页展示：1-是 0-否
+        type: integer
+      isHot:
+        description: 是否热门：0-否 1-是
+        type: integer
+      isNew:
+        description: 是否是最新：0-否 1-是
+        type: integer
+      isRecommend:
+        description: 是否推荐：0-否 1-是
+        type: integer
+      mainRole:
+        description: 小说角色
+        example: 张三丰
+        type: string
+      novelAuthor:
+        description: 小说作者
+        example: 天蚕土豆
+        type: string
+      novelBannerCover:
+        description: 小说banner
+        example: http://baidu.com/a.jpg
+        type: string
+      novelCategoryId:
+        description: 小说分类ID
+        type: integer
+      novelCover:
+        description: 小说小封面
+        example: http://baidu.com/a.jpg
+        type: string
+      novelDescription:
+        description: 小说描述
+        example: 这是一段美好的描述
+        type: string
+      novelNavigationId:
+        description: 小说导航ID
+        example: 1
+        type: integer
+      novelStatus:
+        description: 小说状态：1-连载中 2-已完结
+        example: 1
+        type: integer
+      novelThemeIds:
+        description: 小说专题id数组
+        items:
+          type: integer
+        type: array
+      novelTitle:
+        description: 小说标题
+        example: 盘龙
+        type: string
+      sortNum:
+        description: 排序值
+        type: integer
+    required:
+    - chapterPreview
+    - mainRole
+    - novelAuthor
+    - novelCategoryId
+    - novelCover
+    - novelDescription
+    - novelNavigationId
+    - novelThemeIds
+    - novelTitle
+    type: object
+  request.NovelDelete:
+    properties:
+      novelId:
+        description: 小说ID
+        type: integer
+    required:
+    - novelId
+    type: object
+  request.NovelDetail:
+    properties:
+      novelId:
+        description: 小说ID
+        type: integer
+    required:
+    - novelId
+    type: object
+  request.NovelList:
+    properties:
+      novelStatus:
+        description: 小说状态
+        type: integer
+      novelTitle:
+        description: 小说标题
+        type: string
+      page:
+        description: 当前页码
+        type: integer
+      pageSize:
+        description: 每页显示的条数
+        type: integer
+    type: object
+  request.NovelModify:
+    properties:
+      chapterPreview:
+        description: 章节预览
+        type: string
+      isDisplayIndex:
+        description: 是否首页展示：1-是 0-否
+        type: integer
+      isHot:
+        description: 是否热门：0-否 1-是
+        type: integer
+      isNew:
+        description: 是否是最新：0-否 1-是
+        type: integer
+      isRecommend:
+        description: 是否推荐：0-否 1-是
+        type: integer
+      mainRole:
+        description: 小说角色
+        example: 张三丰
+        type: string
+      novelAuthor:
+        description: 小说作者
+        example: 天蚕土豆
+        type: string
+      novelBannerCover:
+        description: 小说banner
+        example: http://baidu.com/a.jpg
+        type: string
+      novelCategoryId:
+        description: 小说分类ID
+        type: integer
+      novelCover:
+        description: 小说小封面
+        example: http://baidu.com/a.jpg
+        type: string
+      novelDescription:
+        description: 小说描述
+        example: 这是一段美好的描述
+        type: string
+      novelId:
+        description: 小说ID
+        example: 1
+        type: integer
+      novelNavigationId:
+        description: 小说导航ID
+        type: integer
+      novelStatus:
+        description: 小说状态：1-连载中 2-已完结
+        type: integer
+      novelThemeIds:
+        description: 小说专题id数组
+        items:
+          type: integer
+        type: array
+      novelTitle:
+        description: 小说标题
+        example: 盘龙
+        type: string
+      sortNum:
+        description: 排序值
+        type: integer
+    required:
+    - chapterPreview
+    - mainRole
+    - novelAuthor
+    - novelCategoryId
+    - novelCover
+    - novelDescription
+    - novelId
+    - novelNavigationId
+    - novelThemeIds
+    - novelTitle
+    type: object
+  response.Succeed:
+    properties:
+      code:
+        example: 0
+        type: integer
+    type: object
+  utils.Datetime:
+    properties:
+      time.Time:
+        type: string
+    type: object
+host: http://example.com
+info:
+  contact:
+    name: Ares
+  description: Gin小说网站接口文档 这里只做示例
+  title: Gin小说网站接口实战
+  version: "1.0"
+paths:
+  /novel/create:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/request.NovelCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Succeed'
+      summary: 创建
+      tags:
+      - 小说（Novel）
+  /novel/delete:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/request.NovelDelete'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Succeed'
+      summary: 删除
+      tags:
+      - 小说（Novel）
+  /novel/get-detail:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/request.NovelDetail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/novelDTO.NovelDTO'
+      summary: 详情
+      tags:
+      - 小说（Novel）
+  /novel/get-list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/request.NovelList'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/novelDTO.NovelAdminListDTO'
+      summary: 列表
+      tags:
+      - 小说（Novel）
+  /novel/modify:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: object
+        required: true
+        schema:
+          $ref: '#/definitions/request.NovelModify'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Succeed'
+      summary: 修改
+      tags:
+      - 小说（Novel）
+swagger: "2.0"

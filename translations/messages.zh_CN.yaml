@@ -1,0 +1,55 @@
+### 全局
+Env auto load failed.: env 配置初始化失败
+Record not found.: 记录不存在
+The system started the car.: 系统开小车啦，请稍后再试
+Failed to get data.: 获取数据失败
+No router.: 路由不存在
+No method.: 方法不存在
+
+# 导航栏目
+Failed to create navigation column.: 导航栏目创建失败，请稍后再试
+Navigation not existed.: 导航栏目不存在
+Navigation existed.: 导航栏目已存在
+Navigation create failed.: 导航栏目创建失败，请稍后再试
+Navigation modify failed.: 导航栏目更新失败，请稍后再试
+Navigation delete failed.: 导航栏目删除失败，请稍后重试
+
+# 小说分类
+Category creation failed.: 分类创建失败，请稍后再试
+Category modify failed.: 分类修改失败，请稍后再试
+Category not existed.: 分类不存在
+Category existed.: 分类已存在
+Category delete failed.: 分类删除失败，请稍后再试
+
+# 小说专题
+Theme existed.: 专题已经存在
+Theme create failed.: 专题创建失败，请稍后再试
+Theme not existed.: 专题不存在
+Theme modify failed.: 专题修改失败，请稍后再试
+Theme delete failed.: 专题删除失败，请稍后再试
+Some themes do not exist.: 部分专题不存在，请核对后添加
+
+# 友情链接
+Friend link existed.: 友情链接已存在
+Friend link failed.: 友情链接创建失败，请稍后再试
+Friend link not existed.: 友情链接不存在
+Friend link modify failed.: 友情链接修改失败，请稍后再试
+Friend link delete failed.: 友情链接删除失败，请稍后再试
+
+# 文章
+Article create failed.: 文章创建失败，请稍后再试
+Article not existed.: 文章不存在
+Article modify failed.: 文章修改失败，请稍后再试
+Article delete failed.: 文章删除失败，请稍后重试
+
+# 小说
+Novel not existed.: 小说不存在
+Novel modify failed.: 小说修改失败，请稍后再试
+Novel delete failed.: 小说删除失败，请稍后再试
+
+# 小说章节
+Novel chapter create failed.: 小说添加章节失败，请稍后再试
+Novel chapter not existed.: 小说章节不存在
+Novel chapter existed.: 小说章节已存在
+Novel chapter modify failed.: 小说章节修改失败，请稍后再试
+Novel chapter delete failed.: 小说章节删除失败，请稍后再试
