@@ -29,7 +29,7 @@
 <img src="https://img.songyaofeng.com/images/upload37f888efaab0434e9e89ac473710572a.jpeg" width="250" />
 
 
-**没有打赏，给个 star ，送人玫瑰，手留余香** ✨✨✨
+**没有朋友，给个 star ，送人玫瑰，手留余香** ✨✨✨
 
 
 
